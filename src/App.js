@@ -10,7 +10,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState('All');
   const [filterTodos, setFilterTodos] = useState([]);
-
+/////////////////////////////////////////////////////////////
   useEffect(() => {
     getLocalTodos();
   }, []);
@@ -19,7 +19,7 @@ function App() {
     filterHandler();
     saveLocalTodos();
   }, [todos, status])
-
+/////////////////////////////////////////////////////////////
   const filterHandler = () => {
     switch (status) {
       case 'completed':
@@ -32,18 +32,19 @@ function App() {
         break;
     }
   };
+//////////////////////////////////////////////////////////////
 const saveLocalTodos=() =>{
     localStorage.setItem('todos',JSON.stringify(todos));
 };
 const getLocalTodos=() =>{
   if (localStorage.getItem('todos')===null){
     localStorage.setItem('todos', JSON.stringify([]));
-  }else {
+  } else {
     let todolocal = JSON.parse(localStorage.getItem('todos'));
     setTodos(todolocal);
   }
 };
-
+////////////////////////////////////////////////////////////////
   return (
     <div className="">
       <header>
