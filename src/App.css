@@ -122,8 +122,15 @@ form .select:hover::after {
   background: #f7fffe;
   color: #ff6f47;
 }
+.input-flex{
+  display:flex;
+}
 @media screen and (max-width:720px){
 form{
-  flex-direction: column;
-  }
+   flex-direction: column; 
+}
+.todo-item{
+  min-width: 12rem;
+  text-overflow: ellipsis;
+}
 }
